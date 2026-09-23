@@ -1,7 +1,7 @@
 # Repository Standards
 
 > **Status:** ⚪ Draft
-> **Last reviewed:** YYYY-MM-DD
+> **Last reviewed:** 2026-09-23
 
 ## Purpose
 
@@ -10,12 +10,16 @@
 ## The standard
 
 ### Repository naming
+> **TODO:** Repos are named all over the place. We have no way of tying them back to a product. Ex: contracts-hub is used in phila.gov, but is a standalone repo.
 
 ### Required files
+- Every repository must have a PR template at `.github/pull_request_template.md`. See [PR Standards](pr-standards.md#pr-template).
 
 ### Settings
+> **TODO:** Repository cleanup: branches should be deleted from the remote after their PR is merged. Consider turning on **Automatically delete head branches** (Settings → General → Pull Requests).
 
 ### Branch protection
+> **TODO:** Check that this section makes sense. The baseline can have more restrictions if people wish.
 The `main` branch must be protected: no direct pushes, all changes go through a pull request. Importable rulesets are in [`rulesets/`](rulesets/).
 
 | Ruleset | Applies to | What it enforces |
