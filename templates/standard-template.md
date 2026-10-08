@@ -3,23 +3,22 @@
 > **Status:** ⚪ Draft
 > **Last reviewed:** YYYY-MM-DD
 
-## Purpose
-One or two sentences on what problem this standard solves and why it matters.
+<!--
+One or two sentences on what this guide covers and why it matters.
+Mention who it applies to only if that's narrower than all repositories.
 
-## Scope
-Who and what this applies to (for example: all repositories in the City's GitHub organization, or only public-facing services).
+Write each rule using these words, in bold:
+- **must**: required.
+- **should**: expected unless there is a documented reason not to.
+- **may**: optional or encouraged.
 
-## The standard
-The rules themselves. Use **must**, **should**, and **may** consistently:
-- **Must:** required.
-- **Should:** expected unless there is a documented reason not to.
-- **May:** optional or encouraged.
+Put instructions (such as which config file to copy, and where) next to the rule they support.
+Mark open questions as:  > **TODO:** <question>
+-->
 
-## How to apply it
-Step-by-step instructions, including any configs or templates in this folder and how to import them.
+## <First topic>
 
-## Exceptions
-How a team can request or document an exception.
+## <Second topic>
 
 ## References
-- Links to external docs, related guides, or prior discussions.
+<!-- Optional. Delete this section if there are no links. -->

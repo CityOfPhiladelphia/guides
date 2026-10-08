@@ -1,29 +1,48 @@
 # Code Quality
 
 > **Status:** ⚪ Draft
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-06
 
-## Purpose
+## Development setup
 
-## Scope
+### Editor
+Most of our engineers use [VS Code](https://code.visualstudio.com/). Shared configs live in [`vscode/`](vscode/):
 
-## The standard
+| File | What it does |
+| --- | --- |
+| [`extensions.json`](vscode/extensions.json) | Recommended extensions. VS Code prompts anyone who opens the repository to install them. |
+| [`settings.json`](vscode/settings.json) | Workspace settings. Formats files on save, with the right formatter for each language. |
 
-### Unit testing
-> **TODO:** Define expectations for unit test coverage. CI/CD checks will enforce this eventually. Until then, PRs should mention unit test coverage and include new tests where possible (see [PR Standards](pr-standards.md)).
+Both files are split into commented blocks: **All projects**, **Front end**, **Vue**, **Java**, and **.NET**. To use them:
+1. Copy both files into a `.vscode/` folder at the root of your repository.
+2. Keep the **All projects** block and the blocks for your stack. For full stack work, keep every block you need.
+3. Delete the rest, and make sure the last entry in each list doesn't end with a comma.
 
-> **TODO:** Unit testing is not consistent across teams today. Decide whether it should be, and:
-> - Whether unit tests (front end and back end) run in CI/CD, and whether PRs must pass them to merge.
-> - Whether all new repositories must have unit tests.
+> **TODO:** Define which extensions are **required** for each type of development, and which are suggested. Add blocks for any other stacks we use.
 
-### Accessibility
-> **TODO:** Decide whether to run automated accessibility checks on PRs.
+### Formatting
+JavaScript and TypeScript repositories **should** use [Prettier](https://prettier.io/) so formatting is consistent and never comes up in code review. A shared config is in [`prettier/prettier.config.mjs`](prettier/prettier.config.mjs); copy it to the root of your repository.
 
-### Front end styling
-> **TODO:** Document the `ux-tokens` repo, which is being set up so Figma styling tokens can be used in code. The tokens will be used in PhilaUI components and should be used in any custom front end work.
+> **TODO:** Agree on the Prettier settings. The current config was suggested by a team member and is open for discussion.
 
-## How to apply it
+## Unit testing
 
-## Exceptions
+### Coverage
+- Net new work **must** be covered by unit tests. Existing code without tests is tech debt, to be covered methodically over time.
+- If a repository has no test framework when you contribute or open a PR to it, you **must** work with your team to establish one. You **should** share the decision with the wider engineering organization as needed, so teams can stay consistent.
+- Once a repository has test coverage, its unit tests **must** run in the CI/CD pipeline, so tech debt doesn't build up again.
 
-## References
+> **TODO:** Define specific test coverage thresholds.
+
+### Writing good tests
+Although we have defined coverage thresholds, it is not always the main indicator of quality. A high coverage number doesn't mean the logic is tested.
+
+- Tests **should** exercise the code's logic, not just its lines. Getting this right may take multiple passes over the code.
+- Unit tests **should** be easy to run.
+- Tests **should** call the public methods of a class (or invoke the public endpoints of a backend, with a mocked database) and assert facts about the effects of that call or sequence of calls.
+
+## Accessibility
+Accessibility is part of code quality. See the [Accessibility](accessibility.md) guide.
+
+## Front end styling
+> **TODO:** Document the `ux-tokens` repo, which is being set up so Figma styling tokens can be used in code. The tokens will be used in PhilaUI components and **should** be used in any custom front end work.

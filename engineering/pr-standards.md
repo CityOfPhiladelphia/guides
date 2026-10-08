@@ -1,37 +1,28 @@
 # PR Standards
 
 > **Status:** ⚪ Draft
-> **Last reviewed:** 2026-09-23
+> **Last reviewed:** 2026-10-08
 
-## Purpose
+## Ready for review
+A PR is ready for review only when it meets every item below. Authors **must not** request review until it does. Every item is a **must** unless it says otherwise.
 
-## Scope
+- It links to the Wrike ticket for the work.
+- Every section of the [PR template](#pr-template) is filled in. Sections that don't apply are deleted.
+- The description is written by the author. AI **may** help with the code, but a person **must** write the PR description and own the PR.
+- For UI changes, it includes screenshots of the change and a link to the relevant Figma designs.
+- Documentation is updated. See [Documentation](documentation.md).
+- The author has run every script or command included in the PR or its documentation.
+- The code meets the [Code Quality](code-quality.md) standards. Until CI/CD checks are in place, PRs **should** mention unit test coverage and include new tests where possible.
 
-## The standard
+## PR size
+Small PRs respect the reviewer's attention and workload. There's no fixed limit on files or lines, but:
+- Each PR **should** be atomic: tied to the smallest unit of business logic, a single Wrike ticket.
+- A reviewer **should** be able to go through the PR in less than 15 minutes, short enough to walk through in a daily scrum.
+- PRs **may** be larger at the start of a project, but a larger PR **must** include more documentation to help the reviewer.
 
-### What every PR must include
-- A link to the Wrike ticket for the work.
-- For UI changes: screenshots of the change and a link to the relevant Figma designs.
-- A description written by the author. AI may help with the code, but a person must write the PR description and own the PR.
-- Updated documentation. See [Documentation](documentation.md).
+## PR template
+Every repository **must** have a PR template. See [Repository Standards](repository-standards.md#required-files).
 
-Before opening a PR, the author must run every script or command included in the PR or its documentation.
+A barebones template is in [`pr-template/pull_request_template.md`](pr-template/pull_request_template.md). It has a section for each item above: a Wrike ticket link, what changed and why, testing, and screenshots for UI changes. To use it, copy it to `.github/pull_request_template.md` in your repository.
 
-> **TODO:** Until CI/CD checks are in place, PRs should mention unit test coverage and include new tests where possible. See [Code Quality](code-quality.md#unit-testing).
-
-### PR template
-Every repository must have a PR template. See [Repository Standards](repository-standards.md#required-files).
-
-> **TODO:** An org wide template would be nice. Refer to this [CFPB Template](https://github.com/cfpb/development/blob/main/.github/PULL_REQUEST_TEMPLATE.md) as a good example! Build on the existing PR template work within the team.
-
-### Ready for review
-> **TODO:** Define what makes code ready for review, including what documentation must be in place.
-
-### PR size
-> **TODO:** PRs should ideally be small and atomic, out of respect for the reviewer's attention and workload. Decide how many files in one PR is too many. PRs can be larger at the start of a project, but they then require more documentation.
-
-## How to apply it
-
-## Exceptions
-
-## References
+Teams that want a more detailed template **may** extend it. The [CFPB template](https://github.com/cfpb/development/blob/main/.github/PULL_REQUEST_TEMPLATE.md) is a good example.

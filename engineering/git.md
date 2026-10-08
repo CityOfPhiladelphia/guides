@@ -1,27 +1,43 @@
 # Git
 
 > **Status:** ⚪ Draft
-> **Last reviewed:** YYYY-MM-DD
+> **Last reviewed:** 2026-10-08
 
-## Purpose
+## Branches
+Every repository **should** have three long-lived branches:
 
-## Scope
+| Branch | Purpose | Protected | How it's updated |
+| --- | --- | --- | --- |
+| `main` | Production | Yes | Pull requests from `staging` only |
+| `staging` | Pre-production | Yes | Pull requests only |
+| `dev` | Working branch for testing your work | No | Direct pushes and merges, no PR needed |
 
-## The standard
+- `main` and `staging` **must** be protected so they can only be updated through pull requests. The [rulesets](repository-standards.md#branch-protection) protect both.
+- `main` **must** only be updated by pull requests from `staging`.
+- `dev` has no contract or expectations. You **may** push or merge to it directly to test your work, without going through a PR.
+- `dev` **must not** be merged into `staging` or `main`, because it holds other people's untested work. Changes reach `staging` through a PR from their own branch.
 
-### Branch naming and structure conventions
-> **TODO:** Define naming convention for branches. Guided by [Branching Model Guide](https://nvie.com/posts/a-successful-git-branching-model/)
+`dev` could be stopgap until we have ephemeral environments: environments that are spun up and torn down automatically for each branch or PR.
 
-> **TODO:** Define the standard flow of changes between branches. `main` is locked; see [Repository Standards](repository-standards.md#branch-protection).
+## Branch naming
+Working branches **must** be named `<type>/<wrike-id>-<short-description>`:
+- **Type:** one of the prefixes below.
+- **Wrike ID:** the ID of the Wrike ticket for the work.
+- **Short description:** two or three words in lowercase kebab-case.
 
-### Version and release tagging
+| Prefix | Use it for | Example |
+| --- | --- | --- |
+| `feat/` | New features or enhancements | `feat/1234567890-permit-search` |
+| `bugfix/` | Fixes for bugs found before release | `bugfix/1234567890-login-redirect` |
+| `release/` | Preparing a versioned release | `release/v1.4.0` |
+
+Release branches use the version number instead of a Wrike ID and description. The version **must** match the release tag (see [Version and release tagging](#version-and-release-tagging)).
+
+## Version and release tagging
 > **TODO:** Define how versions and releases are tagged. The [`release-tags`](rulesets/release-tags.json) ruleset already protects tags matching `v*`.
 
-### Commit messages
+## Commit messages
 > **TODO:** Define structure for commit messages. Shall we adopt [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)?
 
-## How to apply it
-
-## Exceptions
-
 ## References
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)

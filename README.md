@@ -44,7 +44,11 @@ These guides draw on the work of other public-sector technology teams:
 │   ├── pr-standards.md
 │   ├── code-review.md
 │   ├── documentation.md
-│   └── rulesets/             # Importable GitHub ruleset JSON
+│   ├── accessibility.md
+│   ├── rulesets/             # Importable GitHub ruleset JSON
+│   ├── vscode/               # Shared VS Code extensions and settings
+│   ├── prettier/             # Shared Prettier config
+│   └── pr-template/          # Barebones PR template
 └── product-agile/
     └── README.md             # Section index
 ```
