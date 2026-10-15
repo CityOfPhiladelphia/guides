@@ -74,6 +74,6 @@ The accessibility specialist:
 - Advises engineering and content on applying these standards.
 
 ## References
-- @michaelmart-philagov
+- @michaelmahrt-philagov
 - [WCAG 2.1](https://www.w3.org/TR/WCAG21/)
 - [Pa11y](https://pa11y.org/)

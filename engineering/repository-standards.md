@@ -7,6 +7,8 @@
 > **TODO:** Repos are named all over the place. We have no way of tying them back to a product. Ex: contracts-hub is used in phila.gov, but is a standalone repo.
 
 ## Required files
+- Every repository **must** have a `README.md` based on the [README template](readme-templates/README.md). See [Documentation](documentation.md#technical-documentation).
+- Every repository **must** have a `.github/CODEOWNERS` file that lists GitHub teams (such as `@CityOfPhiladelphia/<team-name>`), not individual users, so reviews and notifications reach whoever is on the team now. It's the single source of truth for who owns the repository; the README links to it.
 - Every repository **must** have a PR template at `.github/pull_request_template.md`. See [PR Standards](pr-standards.md#pr-template).
 
 ## Settings
@@ -17,13 +19,13 @@ The `main` and `staging` branches **must** be protected: no direct pushes, all c
 
 | Ruleset | Applies to | What it enforces |
 | --- | --- | --- |
-| [`default-branch-baseline.json`](rulesets/default-branch-baseline.json) | `main` (the default branch) and `staging` in every repository | The branch can't be deleted or force-pushed. Changes must go through a pull request with 1 approval. New commits dismiss earlier approvals, and all review threads must be resolved before merging. |
-| [`default-branch-strict.json`](rulesets/default-branch-strict.json) | `main` and `staging` in higher-risk repositories | Everything in baseline, plus 2 approvals, code owner review, approval from someone other than whoever pushed last, linear history (no merge commits), and signed commits. |
+| [`default-branch-baseline.json`](rulesets/default-branch-baseline.json) | `main` (the default branch) and `staging` in every repository | The branch can't be deleted or force-pushed. Changes must go through a pull request with 1 approval. New commits dismiss earlier approvals. |
+| [`default-branch-strict.json`](rulesets/default-branch-strict.json) | `main` and `staging` in higher-risk repositories | Everything in baseline, plus 2 approvals, code owner review, approval from someone other than whoever pushed last, all review threads resolved, and signed commits. |
 | [`release-tags.json`](rulesets/release-tags.json) | Tags matching `v*` | Release tags can't be deleted, moved, or force-updated. |
 
 None of the rulesets allow anyone to bypass them, and none include required status checks, because check names differ in every repository. Teams **should** add their CI checks after importing.
 
-> **TODO:** The baseline ruleset should be applied to all repositories. Any exception must be requested. Define who approves exceptions and how the request is made.
+Every repository **must** apply at least the baseline ruleset. Exceptions follow the [exceptions process](../CONTRIBUTING.md#exceptions).
 
 ## Branch naming
 Branch naming conventions are defined in the [Git](git.md#branch-naming) guide.

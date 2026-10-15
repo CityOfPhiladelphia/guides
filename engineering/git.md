@@ -29,12 +29,11 @@ Working branches **must** be named `<type>/<wrike-id>-<short-description>`:
 | --- | --- | --- |
 | `feat/` | New features or enhancements | `feat/1234567890-permit-search` |
 | `bugfix/` | Fixes for bugs found before release | `bugfix/1234567890-login-redirect` |
-| `release/` | Preparing a versioned release | `release/v1.4.0` |
-
-Release branches use the version number instead of a Wrike ID and description. The version **must** match the release tag (see [Version and release tagging](#version-and-release-tagging)).
 
 ## Version and release tagging
-> **TODO:** Define how versions and releases are tagged. The [`release-tags`](rulesets/release-tags.json) ruleset already protects tags matching `v*`.
+Releases are typically made from `main` and marked with a tag starting with `v`, such as `v1.4.0`. The [`release-tags`](rulesets/release-tags.json) ruleset protects these tags so they can't be moved or deleted.
+
+> **TODO:** Define the version number format.
 
 ## Commit messages
 > **TODO:** Define structure for commit messages. Shall we adopt [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)?

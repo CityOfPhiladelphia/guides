@@ -12,7 +12,9 @@ A PR is ready for review only when it meets every item below. Authors **must not
 - For UI changes, it includes screenshots of the change and a link to the relevant Figma designs.
 - Documentation is updated. See [Documentation](documentation.md).
 - The author has run every script or command included in the PR or its documentation.
-- The code meets the [Code Quality](code-quality.md) standards. Until CI/CD checks are in place, PRs **should** mention unit test coverage and include new tests where possible.
+- The code meets the [Code Quality](code-quality.md) standards, including unit tests for new work. Until CI/CD checks are in place, PRs **should** also mention test coverage.
+
+PRs from `staging` to `main` are the exception: they bundle many changes, so they don't link a single Wrike ticket. Each change they include is already traceable through its own merged PR.
 
 ## PR size
 Small PRs respect the reviewer's attention and workload. There's no fixed limit on files or lines, but:
@@ -23,6 +25,6 @@ Small PRs respect the reviewer's attention and workload. There's no fixed limit 
 ## PR template
 Every repository **must** have a PR template. See [Repository Standards](repository-standards.md#required-files).
 
-A barebones template is in [`pr-template/pull_request_template.md`](pr-template/pull_request_template.md). It has a section for each item above: a Wrike ticket link, what changed and why, testing, and screenshots for UI changes. To use it, copy it to `.github/pull_request_template.md` in your repository.
+A barebones template is in [`pr-templates/pull_request_template.md`](pr-templates/pull_request_template.md). It has a section for each item above: a Wrike ticket link, what changed and why, testing, and screenshots for UI changes. To use it, copy it to `.github/pull_request_template.md` in your repository.
 
 Teams that want a more detailed template **may** extend it. The [CFPB template](https://github.com/cfpb/development/blob/main/.github/PULL_REQUEST_TEMPLATE.md) is a good example.

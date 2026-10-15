@@ -1,8 +1,6 @@
 # Guides | City of Philadelphia - Office of Innovation and Technology
 The goal of this repository is to act as a central place for engineering practices at the City of Philadelphia - Office of Innovation and Technology (OIT).
 
-Confluence remains the main home for documentation. This repository holds technical GitHub and engineering policies, and is linked from Confluence.
-
 Guides are grouped into section folders (such as `engineering/`), and each guide is a single kebab-case Markdown file (such as `engineering/code-review.md`). Each section's `README.md` lists its guides. Importable configurations (GitHub rulesets, templates, and so on) live in a subfolder of the section that uses them.
 
 Want to add or change a standard? See [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -48,7 +46,8 @@ These guides draw on the work of other public-sector technology teams:
 │   ├── rulesets/             # Importable GitHub ruleset JSON
 │   ├── vscode/               # Shared VS Code extensions and settings
 │   ├── prettier/             # Shared Prettier config
-│   └── pr-template/          # Barebones PR template
+│   ├── pr-templates/         # Barebones PR template
+│   └── readme-templates/     # README template for repositories
 └── product-agile/
     └── README.md             # Section index
 ```
