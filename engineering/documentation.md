@@ -1,7 +1,7 @@
 # Documentation
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-10-15
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-10-22
 
 Documentation comes in two kinds:
 - **Business and feature documentation** explains *why* something was built, and lives outside the repository.

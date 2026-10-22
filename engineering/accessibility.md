@@ -1,7 +1,7 @@
 # Accessibility
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-10-08
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-10-22
 
 These standards cover what engineering builds. Writing alt text, captions, and transcripts is a content responsibility; engineering ensures components support them.
 
@@ -21,7 +21,7 @@ The sections below follow WCAG's four principles of accessibility, known as [POU
 - Content stays readable with line height at 1.5 times the font size, paragraph spacing at 2 times, letter spacing at 0.12 times, and word spacing at 0.16 times. Fixed-height text containers **should** be avoided.
 - Information is never conveyed by color alone.
 - Fields that collect personal information use the matching `autocomplete` attribute, such as `autocomplete="email"`.
-- Content that appears on hover or focus can be dismissed, stays visible while hovered, and doesn't disappear on its own.
+- Content that appears on hover or focus can be dismissed, stays visible while hovered, and doesn't disappear on its own. (By using Escape key is preferred)
 - Media players support captions, audio description, and transcripts, with keyboard-accessible controls to turn them on. Players used for live video support live captions.
 - Audio that plays automatically for more than three seconds can be paused or stopped, or its volume controlled separately from the system volume.
 

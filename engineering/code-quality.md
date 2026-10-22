@@ -1,7 +1,7 @@
 # Code Quality
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-10-06
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-10-22
 
 ## Development setup
 
@@ -17,8 +17,6 @@ Both files are split into commented blocks: **All projects**, **Front end**, **V
 1. Copy both files into a `.vscode/` folder at the root of your repository.
 2. Keep the **All projects** block and the blocks for your stack. For full stack work, keep every block you need.
 3. Delete the rest, and make sure the last entry in each list doesn't end with a comma.
-
-> **TODO:** Define which extensions are **required** for each type of development, and which are suggested. Add blocks for any other stacks we use.
 
 ### Formatting
 JavaScript and TypeScript repositories **should** use [Prettier](https://prettier.io/) so formatting is consistent and never comes up in code review. A shared config is in [`prettier/prettier.config.mjs`](prettier/prettier.config.mjs); copy it to the root of your repository.

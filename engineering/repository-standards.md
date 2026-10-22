@@ -1,7 +1,7 @@
 # Repository Standards
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-09-23
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-09-22
 
 ## Repository naming
 > **TODO:** Repos are named all over the place. We have no way of tying them back to a product. Ex: contracts-hub is used in phila.gov, but is a standalone repo.
@@ -12,7 +12,7 @@
 - Every repository **must** have a PR template at `.github/pull_request_template.md`. See [PR Standards](pr-standards.md#pr-template).
 
 ## Settings
-> **TODO:** Repository cleanup: branches should be deleted from the remote after their PR is merged. Consider turning on **Automatically delete head branches** (Settings → General → Pull Requests).
+Branches **should** be deleted from the remote after their PR is merged, so repositories don't fill up with stale branches. Turn on **Automatically delete head branches** (Settings → General → Pull Requests) to do this for you. Protected branches such as `staging` aren't affected, because the rulesets block their deletion.
 
 ## Branch protection
 The `main` and `staging` branches **must** be protected: no direct pushes, all changes go through a pull request. See [Git](git.md#branches) for how branches are used. Importable rulesets are in [`rulesets/`](rulesets/).

@@ -4,10 +4,10 @@ Our goal is to develop secure and dependable software for the City of Philadelph
 
 | Guide | Summary | Status |
 | --- | --- | --- |
-| [Repository Standards](repository-standards.md) | | ⚪ Draft |
-| [Git](git.md) | | ⚪ Draft |
-| [Code Quality](code-quality.md) | | ⚪ Draft |
-| [PR Standards](pr-standards.md) | | ⚪ Draft |
-| [Code Review](code-review.md) | | ⚪ Draft |
-| [Documentation](documentation.md) | | ⚪ Draft |
-| [Accessibility](accessibility.md) | | ⚪ Draft |
+| [Repository Standards](repository-standards.md) | | 🟢 Adopted |
+| [Git](git.md) | | 🟢 Adopted |
+| [Code Quality](code-quality.md) | | 🟢 Adopted |
+| [PR Standards](pr-standards.md) | | 🟢 Adopted |
+| [Code Review](code-review.md) | | 🟢 Adopted |
+| [Documentation](documentation.md) | | 🟢 Adopted |
+| [Accessibility](accessibility.md) | | 🟢 Adopted |

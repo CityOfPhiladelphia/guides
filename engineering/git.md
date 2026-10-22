@@ -1,7 +1,7 @@
 # Git
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-10-08
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-10-22
 
 ## Branches
 Every repository **should** have three long-lived branches:
@@ -33,10 +33,19 @@ Working branches **must** be named `<type>/<wrike-id>-<short-description>`:
 ## Version and release tagging
 Releases are typically made from `main` and marked with a tag starting with `v`, such as `v1.4.0`. The [`release-tags`](rulesets/release-tags.json) ruleset protects these tags so they can't be moved or deleted.
 
-> **TODO:** Define the version number format.
-
 ## Commit messages
-> **TODO:** Define structure for commit messages. Shall we adopt [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)?
+Commit messages **must** follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/): `<type>(<optional scope>): <description>`.
+
+| Type | Use it for |
+| --- | --- |
+| `feat` | A new feature |
+| `fix` | A bug fix |
+| `docs` | Documentation only |
+| `test` | Adding or updating tests |
+| `refactor` | Code changes that don't fix a bug or add a feature |
+| `chore` | Maintenance, such as dependency updates or build config |
+
+For example, `feat(search): add permit number filter` or `fix: correct date format on receipts`. Mark breaking changes with `!` after the type, such as `feat!: remove legacy API`.
 
 ## References
 - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)

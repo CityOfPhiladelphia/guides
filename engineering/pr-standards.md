@@ -1,7 +1,7 @@
 # PR Standards
 
-> **Status:** ⚪ Draft
-> **Last reviewed:** 2026-10-08
+> **Status:** 🟢 Adopted
+> **Last reviewed:** 2026-10-22
 
 ## Ready for review
 A PR is ready for review only when it meets every item below. Authors **must not** request review until it does. Every item is a **must** unless it says otherwise.
