@@ -1,0 +1,36 @@
+// Workspace settings. Copy to .vscode/settings.json in your repository.
+// Keep the "All projects" block, then keep the blocks for your stack and delete the rest.
+// After deleting, make sure the last setting doesn't end with a comma.
+{
+  // ── All projects ────────────────────────────────
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "[json][jsonc][markdown][yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ── Front end (JavaScript, TypeScript, CSS, HTML) ──
+  "[javascript][typescript][css][scss][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+
+  // ── Vue ─────────────────────────────────────────
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // ── Java ────────────────────────────────────────
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+
+  // ── .NET ────────────────────────────────────────
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  }
+}

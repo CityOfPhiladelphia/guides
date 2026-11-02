@@ -1,0 +1,25 @@
+// Recommended extensions. Copy to .vscode/extensions.json in your repository.
+// Keep the "All projects" block, then keep the blocks for your stack and delete the rest.
+// Full stack? Keep every block you need.
+// After deleting, make sure the last entry in the list doesn't end with a comma.
+{
+  "recommendations": [
+    // ── All projects ──────────────────────────────
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+
+    // ── Front end (any framework) ─────────────────
+    "dbaeumer.vscode-eslint",
+    "deque-systems.vscode-axe-linter",
+
+    // ── Vue ───────────────────────────────────────
+    "vue.volar",
+
+    // ── Java ──────────────────────────────────────
+    "vscjava.vscode-java-pack",
+
+    // ── .NET ──────────────────────────────────────
+  
+  ],
+  "unwantedRecommendations": []
+}
